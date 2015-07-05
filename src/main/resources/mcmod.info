@@ -1,0 +1,15 @@
+[
+{
+  "modid": "momentumCore",
+  "name": "Momentum Core",
+  "description": "A mod used for the Momentum modpack.",
+  "version": "$version",
+  "mcversion": "$mcversion",
+  "url": " ",
+  "authorList": [ "AEnterprise"],
+  "credits": "AEnterprise",
+  "logoFile": "assets/momentumCore/logo.png",
+  "requiredMods": [ "Forge" ],
+  "dependencies": []
+}
+]
