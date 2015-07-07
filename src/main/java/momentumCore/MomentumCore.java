@@ -4,6 +4,8 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import momentumCore.core.Listeners;
+import momentumCore.core.PacketHandler;
+import momentumCore.core.TimerRenderer;
 import momentumCore.items.NetherOrb;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -30,5 +32,7 @@ public class MomentumCore {
 		netherOrb = new NetherOrb();
 		FMLCommonHandler.instance().bus().register(new Listeners());
 		MinecraftForge.EVENT_BUS.register(new Listeners());
+		FMLCommonHandler.instance().bus().register(new TimerRenderer());
+		PacketHandler.init();
 	}
 }
