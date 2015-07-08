@@ -9,7 +9,7 @@ import net.minecraft.util.EnumChatFormatting;
  */
 public class Timer {
 	public static int hours, minutes, seconds, milliseconds;
-	public static boolean running;
+	public static boolean running, overlay;
 	private static long lastTime;
 
 	public static void init(int hours, int minutes, int seconds, int milliseconds, boolean running) {
@@ -53,7 +53,11 @@ public class Timer {
 	}
 
 	public static String getDisplayTime() {
-		String time = "" + EnumChatFormatting.GREEN;
+		return "" + EnumChatFormatting.GREEN + getDisplayTimeRaw();
+	}
+
+	public static String getDisplayTimeRaw() {
+		String time = "";
 		if (hours < 10)
 			time += "0";
 		time += hours + ":";
@@ -70,8 +74,9 @@ public class Timer {
 		running = true;
 	}
 
-	public void stop() {
+	public static void stop() {
 		running = false;
+		overlay = true;
 	}
 
 }
