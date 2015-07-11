@@ -23,7 +23,7 @@ public class TimerRenderer {
 				MC.fontRenderer.drawString(Timer.getDisplayTime(), 50, 45, 0x000000, true);
 				GL11.glPopMatrix();
 			} else {
-				MC.fontRenderer.drawString(Timer.getDisplayTime(), 0, 0, 0x000000, true);
+				MC.fontRenderer.drawString(Timer.getDisplayTime(), 8, 8, 0x000000, true);
 			}
 		}
 	}

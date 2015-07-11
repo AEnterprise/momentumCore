@@ -36,7 +36,7 @@ public class FireworkMessage implements IMessage, IMessageHandler<FireworkMessag
 			NBTTagCompound tag = new NBTTagCompound();
 			Random random = new Random();
 			int[] c = new int[5];
-			for (int j = 0; j < 2; j++)
+			for (int j = 0; j < 5; j++)
 				c[j] = ItemDye.field_150922_c[random.nextInt(15) + 1];
 			explosion.setIntArray("Colors", c);
 			explosion.setBoolean("Trail", true);
