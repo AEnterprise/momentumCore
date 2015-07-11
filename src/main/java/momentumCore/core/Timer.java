@@ -77,6 +77,7 @@ public class Timer {
 	public static void stop() {
 		running = false;
 		overlay = true;
+		PacketHandler.instance.sendToServer(new FireworkMessage());
 	}
 
 }

@@ -13,5 +13,6 @@ public class PacketHandler {
 
 	public static void init() {
 		instance.registerMessage(LogoutMessage.class, LogoutMessage.class, 0, Side.SERVER);
+		instance.registerMessage(FireworkMessage.class, FireworkMessage.class, 1, Side.SERVER);
 	}
 }
